@@ -21,6 +21,7 @@ class ResponsesController < ApplicationController
       author: "Cookie Monster",
       quote:"Early bird gets the worm. But cookie taste better than worm. So me sleep in.",
     }
+    render formats: :json
   end
 
   def xml
@@ -28,6 +29,7 @@ class ResponsesController < ApplicationController
     <author>Cookie Monster</author>
     <text>Early bird gets the worm. But cookie taste better than worm. So me sleep in.</text>
     </quote>"
+    render formats: :xml
   end
 
   def csv
@@ -46,4 +48,9 @@ class ResponsesController < ApplicationController
     # you'll need to use send_file instead of render
     # if you want the image to show inline, use disposition: :inline
   end
+
+  
+
+
+
 end
